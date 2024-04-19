@@ -1,0 +1,70 @@
+#r1{
+    background-color:rgba(107, 142, 35, 0.5);
+}
+#star{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgba(245, 245, 220,0.5);
+    color: darkgoldenrod;
+}
+#cui{
+    position:absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 330px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.det{
+    padding: 25px;
+}
+.det h6{
+    margin-block: 10px;
+}
+h5{
+    color: darkolivegreen;
+    text-shadow: 1px 0.5px 0.5px grey;
+}
+.card{
+    width: 67rem; 
+    display: flex; 
+    flex-direction: row;
+}
+img{
+    width:330px;
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 18rem; 
+        flex-direction: column;
+        margin: 0;
+    }
+    img{
+        width: 18rem;
+    }
+    #r1{
+        margin: 0;
+        padding: 0;
+    }
+    #cui{
+        width: 18rem;
+    }
+    #star{
+        background-color: rgba(245, 245, 220,0.8);
+        z-index: 1;
+        padding: 14px;
+    }
+    .col{
+        margin: 0;
+        padding: 0;
+    }
+    .div{
+        margin: 0;
+        padding: 0;
+    }
+}

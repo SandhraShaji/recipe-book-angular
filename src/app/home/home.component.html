@@ -1,0 +1,33 @@
+<div class="div w-100">
+    <div id="r1" class="row m-4 p-3">
+      <div class="d-flex justify-content-evenly mt-5 mb-4">
+        <input style="height: 40px;" [(ngModel)]="searchText" type="text" placeholder="Search by name" class="form-control w-50 text-center">
+      </div>
+        <div *ngFor="let recipe of allRecipes | search:searchText" class="col">
+            <div class="card mx-5 my-4">
+              <h6 id="star">{{recipe.rating}}<i class="fa-solid fa-star ms-2"></i></h6>
+              <div style="background-color: rgba(0, 0, 0, 0.1);">
+                <div id="cui"><h6>{{recipe.cuisine}}</h6></div>
+                <img src={{recipe.image}}  alt="...">
+                <div class="det">
+                  <h6>Preparation Time: {{recipe.prepTimeMinutes+recipe.cookTimeMinutes}} mins</h6>
+                  <h6>Difficulty: {{recipe.difficulty}}</h6>
+                  <h6>Serves: {{recipe.servings}}</h6>
+                  <h6>Calories/Serving: {{recipe.caloriesPerServing}}</h6>  
+                </div>
+              </div>
+                <div class="card-body ms-2">
+                  <h5 class="card-title my-3">{{recipe.name}}</h5>
+                  <h6 class="card-title mb-3">Ingredients: </h6>
+                  <ul class="card-text mb-3">
+                    <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+                  </ul>
+                  <h6 class="card-title mb-3">Instructions: </h6>
+                  <ol class="card-text mb-3">
+                    <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
+                </ol>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
